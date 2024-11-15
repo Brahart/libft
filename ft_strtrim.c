@@ -6,7 +6,7 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:10:17 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/15 13:25:13 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 13:56:40 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 int	main(void)
 {
 	printf("%s", ft_strtrim("0   SALUT    0", " 0"));
-	printf("heureux");
+	printf("bonjour");
 	return (0);
 }
