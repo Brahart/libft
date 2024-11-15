@@ -6,7 +6,7 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:10:17 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/15 13:56:40 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2024/11/15 19:01:01 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	check_set(const char *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i == c])
+		if (s[i] == c)
 			return (1);
 		i++;
 	}
@@ -47,12 +47,16 @@ char	*ft_strtrim(const char *s1, const char *set)
 			end = 0;
 		i++;
 	}
-	return (ft_substr(s1, start, ft_strlen(&s1[start] - end)));
+	return (ft_substr(s1, start, (ft_strlen(&s1[start]) - end)));
 }
 
-int	main(void)
+/*int	main(void)
 {
-	printf("%s", ft_strtrim("0   SALUT    0", " 0"));
-	printf("bonjour");
+	const char	*s;
+	const char	*set;
+
+	s = "   SALUT    ";
+	set = " 0";
+	printf("%s", ft_strtrim(s, set));
 	return (0);
-}
+}*/
