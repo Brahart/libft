@@ -1,0 +1,96 @@
+#include "libft.h"
+
+char	*ft_allword(const char *str, int start, int end)
+{
+    char *word;
+    int i;
+    
+    i = 0;
+    word = ft_calloc((end - start + 1), sizeof(char));
+    if (!word)
+        return (NULL);
+    while (start < end)
+    {
+        word[i] = str[start];
+        i++;
+        start++;
+    }
+    word[i] = 0;
+    return (word);
+}
+
+
+size_t	ft_countword(const char *str, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (*str)
+	{
+		if (*str != c && i == 0)
+		{
+			i = 1;
+			count++;
+		}
+		else if (*str == c && i != 0)
+			i = 0;
+		str++;
+	}
+	return (count);
+}
+void	*ft_error(char **str, int j)
+{
+	int	i;
+
+	i = 0;
+	while (i < j)
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+	return (NULL);
+}
+
+char	**ft_allcalloc(size_t nmemb, size_t size)
+{
+	char	**str;
+
+	str = ft_calloc(nmemb, size);
+	if (!str)
+		return (NULL);
+	else
+		return (str);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**str;
+	size_t	i;
+	int	j;
+	int	word;
+
+	i = 0;
+	j = 0;
+	word = -1;
+	str = ft_allcalloc((ft_countword(s, c) + 1), sizeof(char *));
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] != c && word < 0)
+			word = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && word >= 0)
+    	{
+	   	    str[j] = ft_allword(s, word, i);
+			if (!(str[j]))
+				return (ft_error(str, j));
+    	    word = -1;
+       	    j++;
+		}
+    	i++;
+    }
+    return (str);
+}
+
+
