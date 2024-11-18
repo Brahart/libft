@@ -1,24 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/18 18:20:58 by asinsard          #+#    #+#             */
+/*   Updated: 2024/11/18 18:22:09 by asinsard         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_allword(const char *str, int start, int end)
 {
-    char *word;
-    int i;
-    
-    i = 0;
-    word = ft_calloc((end - start + 1), sizeof(char));
-    if (!word)
-        return (NULL);
-    while (start < end)
-    {
-        word[i] = str[start];
-        i++;
-        start++;
-    }
-    word[i] = 0;
-    return (word);
-}
+	char	*word;
+	int		i;
 
+	i = 0;
+	word = ft_calloc((end - start + 1), sizeof(char));
+	if (!word)
+		return (NULL);
+	while (start < end)
+	{
+		word[i] = str[start];
+		i++;
+		start++;
+	}
+	word[i] = 0;
+	return (word);
+}
 
 size_t	ft_countword(const char *str, char c)
 {
@@ -40,6 +51,7 @@ size_t	ft_countword(const char *str, char c)
 	}
 	return (count);
 }
+
 void	*ft_error(char **str, int j)
 {
 	int	i;
@@ -69,8 +81,8 @@ char	**ft_split(const char *s, char c)
 {
 	char	**str;
 	size_t	i;
-	int	j;
-	int	word;
+	int		j;
+	int		word;
 
 	i = 0;
 	j = 0;
@@ -81,16 +93,14 @@ char	**ft_split(const char *s, char c)
 		if (s[i] != c && word < 0)
 			word = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && word >= 0)
-    	{
-	   	    str[j] = ft_allword(s, word, i);
+		{
+			str[j] = ft_allword(s, word, i);
 			if (!(str[j]))
 				return (ft_error(str, j));
-    	    word = -1;
-       	    j++;
+			word = -1;
+			j++;
 		}
-    	i++;
-    }
-    return (str);
+		i++;
+	}
+	return (str);
 }
-
-
