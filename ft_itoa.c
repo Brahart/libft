@@ -6,13 +6,13 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:09:57 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/19 13:20:47 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 19:04:10 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_intlen(long int res)
+static size_t	ft_intlen(long int res)
 {
 	int	count;
 	int	neg;
@@ -30,7 +30,7 @@ size_t	ft_intlen(long int res)
 	return (count);
 }
 
-char	*ft_intis(long int res, int len, char *str)
+static char	*ft_intis(long int res, int len, char *str)
 {
 	if (res < 0)
 	{

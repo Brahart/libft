@@ -6,7 +6,7 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:20:58 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/19 16:25:50 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 16:37:49 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,12 +101,11 @@ char	**ft_split(const char *s, char c)
 		}
 		i++;
 	}
-	str[j] = NULL;
 	return (str);
 }
 
-int	main(void)
+/* int	main(void)
 {
-	printf("%s", *ft_split("hello!", ' '));
+	printf("%s", *ft_split("", ' '));
 	return (0);
-}
+} */
