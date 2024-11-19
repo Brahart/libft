@@ -6,13 +6,13 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:20:58 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/18 18:22:09 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 16:25:50 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_allword(const char *str, int start, int end)
+static char	*ft_allword(const char *str, int start, int end)
 {
 	char	*word;
 	int		i;
@@ -27,11 +27,10 @@ char	*ft_allword(const char *str, int start, int end)
 		i++;
 		start++;
 	}
-	word[i] = 0;
 	return (word);
 }
 
-size_t	ft_countword(const char *str, char c)
+static size_t	ft_countword(const char *str, char c)
 {
 	int	i;
 	int	count;
@@ -52,7 +51,7 @@ size_t	ft_countword(const char *str, char c)
 	return (count);
 }
 
-void	*ft_error(char **str, int j)
+static void	*ft_error(char **str, int j)
 {
 	int	i;
 
@@ -66,7 +65,7 @@ void	*ft_error(char **str, int j)
 	return (NULL);
 }
 
-char	**ft_allcalloc(size_t nmemb, size_t size)
+static char	**ft_allcalloc(size_t nmemb, size_t size)
 {
 	char	**str;
 
@@ -88,7 +87,7 @@ char	**ft_split(const char *s, char c)
 	j = 0;
 	word = -1;
 	str = ft_allcalloc((ft_countword(s, c) + 1), sizeof(char *));
-	while (i <= ft_strlen(s))
+	while (str != NULL && i <= ft_strlen(s))
 	{
 		if (s[i] != c && word < 0)
 			word = i;
@@ -102,5 +101,12 @@ char	**ft_split(const char *s, char c)
 		}
 		i++;
 	}
+	str[j] = NULL;
 	return (str);
+}
+
+int	main(void)
+{
+	printf("%s", *ft_split("hello!", ' '));
+	return (0);
 }

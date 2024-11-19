@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrahamsinsard <abrahamsinsard@student.    +#+  +:+       +#+        */
+/*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:09:57 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/18 23:07:23 by abrahamsins      ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 13:20:47 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,25 +65,26 @@ char	*ft_itoa(int n)
 	if (res < 0)
 	{
 		len += 1;
-		str = malloc(sizeof(char *) * len + 1);
+		str = malloc(sizeof(char) * (len + 1));
 	}
-	if (res >= 0)
-		str = malloc(sizeof(char *) * len + 1);
+	else
+		str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
 	len--;
 	if (res == 0)
-	{
-		str[len] = 48;
-		return ((char *)str);
-	}
+		return ((str[len] = 48), str);
 	ft_intis(res, len, str);
 	return (str);
 }
 
 /*int	main(void)
 {
-	printf("%s", ft_itoa(1000034));
+	char	*str;
+
+	str = ft_itoa(-999);
+	printf("%s", str);
+	free(str);
 	return (0);
 }*/

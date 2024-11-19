@@ -27,10 +27,12 @@ SRCMANDATORY =	ft_atoi.c \
 				ft_split.c \
 				ft_strchr.c \
 				ft_strdup.c \
+				ft_striteri.c \
 				ft_strjoin.c \
 				ft_strlcat.c \
 				ft_strlcpy.c \
 				ft_strlen.c \
+				ft_strmapi.c \
 				ft_strncmp.c \
 				ft_strnstr.c \
 				ft_strrchr.c \
@@ -47,6 +49,8 @@ SRCBONUS =	ft_lstnew.c \
 
 OBJMANDATORY = $(SRCMANDATORY:.c=.o)
 
+OBJBONUS = $(SRCBONUS:.c=.o)
+
 all: $(NAME)
 	rm -f $(OBJMANDATORY)
 
@@ -56,7 +60,7 @@ all: $(NAME)
 $(NAME): $(OBJMANDATORY)
 	ar -rcs $(NAME) $(OBJMANDATORY)
 clean:
-	rm -f $(OBJMANDATORY)
+	rm -f $(OBJMANDATORY) $(OBJBONUS)
 
 fclean: clean
 	rm -f $(NAME)

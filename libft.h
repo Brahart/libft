@@ -6,7 +6,7 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:24:06 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/18 18:16:35 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 12:32:59 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,12 @@ void				ft_putstr_fd(char *s, int fd);
 char				**ft_split(const char *s, char c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(const char *s);
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(const char *s1, const char *s2);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 size_t				ft_strlcpy(char *dest, const char *src, size_t size);
 size_t				ft_strlen(const char *str);
+char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, int size);
 char				*ft_strnstr(const char *big, const char *little, size_t n);
 char				*ft_substr(const char *s, unsigned int start, size_t len);
@@ -56,5 +58,12 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstadd_front(t_list **lst, t_list *new);
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
+t_list				*ft_lstlast(t_list *lst);
+t_list				*ft_lstnew(void *content);
+int					ft_lstsize(t_list *lst);
 
 #endif

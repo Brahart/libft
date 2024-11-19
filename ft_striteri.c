@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrahamsinsard <abrahamsinsard@student.    +#+  +:+       +#+        */
+/*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:25:11 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/18 23:34:53 by abrahamsins      ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 12:29:39 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
@@ -19,6 +21,5 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	{
 		(*f)(i, &s[i]);
 		i++;
-	}	
+	}
 }
-
