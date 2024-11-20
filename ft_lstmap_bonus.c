@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 19:25:16 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/19 19:46:29 by asinsard         ###   ########lyon.fr   */
+/*   Created: 2024/11/20 11:19:04 by asinsard          #+#    #+#             */
+/*   Updated: 2024/11/20 13:44:34 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,27 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list list
+	t_list	*new_lst;
+	t_list	*new_cont;
+
+	new_lst = NULL;
+	new_cont = malloc(sizeof(t_list));
+	if (!lst || !new_cont || !f)
+		return (NULL);
+	new_cont->content = f(lst->content);
+	new_lst = new_cont;
+	while (lst->next)
+	{
+		new_lst->next = malloc(sizeof(t_list));
+		if (!new_lst->next)
+		{
+			ft_lstclear(&new_cont, del);
+			return (NULL);
+		}
+		new_lst = new_lst->next;
+		lst = lst->next;
+		new_lst->content = f(lst->content);
+	}
+	new_lst->next = NULL;
+	return (new_cont);
 }

@@ -6,7 +6,7 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:52:27 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/14 18:46:14 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 19:55:18 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*tab;
 
 	i = 0;
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
 	if (size != 0 && nmemb > 2147483647 / size)
 		return (NULL);
 	tab = malloc(size * nmemb);
