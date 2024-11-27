@@ -6,7 +6,7 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:36:50 by asinsard          #+#    #+#             */
-/*   Updated: 2024/11/15 19:26:57 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2024/11/27 22:33:53 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		i++;
 		j++;
 	}
-	str[i] = '\0';
 	return (str);
 }
 
