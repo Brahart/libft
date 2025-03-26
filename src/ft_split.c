@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:20:58 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:19:36 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/18 22:58:13 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 static char	*ft_allword(const char *str, int start, int end)
 {
@@ -51,7 +51,7 @@ static size_t	ft_countword(const char *str, char c)
 	return (count);
 }
 
-static void	*ft_error(char **str, int j)
+static void	*ft_error_split(char **str, int j)
 {
 	int	i;
 
@@ -95,7 +95,7 @@ char	**ft_split(const char *s, char c)
 		{
 			str[j] = ft_allword(s, word, i);
 			if (!(str[j]))
-				return (ft_error(str, j));
+				return (ft_error_split(str, j));
 			word = -1;
 			j++;
 		}

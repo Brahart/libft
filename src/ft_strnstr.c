@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:22:08 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:20:00 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/26 00:25:49 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {

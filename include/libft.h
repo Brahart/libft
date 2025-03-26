@@ -6,7 +6,7 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:24:06 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:20:44 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/26 00:31:13 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <unistd.h>
+
+# define BOLD_GREEN "\e[1;32m"
+# define BOLD_RED "\e[1;31m"
+# define BOLD_BLUE "\e[1;34m"
+# define BOLD_YELLOW "\e[1;33m"
+# define BOLD_PURPLE "\e[1;35m"
+# define BOLD_CYAN "\e[1;36m"
+# define STOP_COLOR "\e[0m"
 
 int					ft_atoi(const char *nptr);
 void				ft_bzero(void *s, size_t n);
@@ -33,7 +40,7 @@ void				*ft_memset(void *s, int c, size_t n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr_fd(const char *s, int fd);
 char				**ft_split(const char *s, char c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(const char *s);
@@ -50,6 +57,8 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strtrim(const char *s1, const char *set);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+void				free_tab(char **tab);
+void				ft_error(const char *s, int error);
 
 typedef struct s_list
 {

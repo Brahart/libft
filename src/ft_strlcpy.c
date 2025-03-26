@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:36:04 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:19:51 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/26 00:25:59 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

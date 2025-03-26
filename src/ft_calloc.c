@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:52:27 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:18:31 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/26 00:26:22 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

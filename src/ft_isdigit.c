@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:27:37 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:18:41 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/18 22:56:52 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

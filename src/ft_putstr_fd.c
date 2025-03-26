@@ -6,13 +6,14 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:18:59 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:19:33 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/26 00:19:15 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
+#include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	int	i;
 

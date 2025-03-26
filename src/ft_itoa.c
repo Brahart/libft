@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:09:57 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:18:45 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/18 22:56:56 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 static size_t	ft_intlen(long int res)
 {

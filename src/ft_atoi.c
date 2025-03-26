@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:55:59 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:18:24 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/18 22:56:31 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

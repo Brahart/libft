@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:04:07 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:20:09 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/26 00:30:06 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {

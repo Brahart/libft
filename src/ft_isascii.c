@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:57:42 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:18:40 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/18 22:56:50 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

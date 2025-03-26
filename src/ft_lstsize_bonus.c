@@ -6,11 +6,11 @@
 /*   By: asinsard <asinsard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:18:13 by asinsard          #+#    #+#             */
-/*   Updated: 2024/12/11 21:19:08 by asinsard         ###   ########lyon.fr   */
+/*   Updated: 2025/03/18 22:57:22 by asinsard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
